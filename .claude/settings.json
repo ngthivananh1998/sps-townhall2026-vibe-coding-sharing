@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import openpyxl; print\\('openpyxl available'\\)\")",
+      "Bash(python -c \"import xlrd; print\\('xlrd available'\\)\")"
+    ]
+  }
+}

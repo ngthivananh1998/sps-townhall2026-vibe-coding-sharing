@@ -360,12 +360,6 @@
     .momo-table th { padding: 6px 8px; font-size: 0.68rem; }
     .momo-table td { padding: 6px 8px; font-size: 0.72rem; }
 
-    /* Timeline */
-    .timeline-content strong { font-size: 0.8rem; }
-    .timeline-content span { font-size: 0.72rem; }
-    .timeline-emotion { font-size: 0.62rem; }
-    .timeline-dot { width: 10px; height: 10px; }
-
     /* Flow */
     .flow { gap: 4px; margin: 8px 0; }
     .flow-step { padding: 6px 10px; font-size: 0.72rem; }
@@ -393,16 +387,11 @@
     .clean-list li::before { top: 10px; width: 6px; height: 6px; }
 
     /* Phone/Desktop mockups */
-    .phone-frame { border-width: 2px; border-radius: 16px; }
     .desktop-frame { border-radius: 6px; }
     .desktop-frame .desktop-bar { height: 18px; padding: 0 6px; }
     .desktop-frame .desktop-bar .dot { width: 6px; height: 6px; }
 
-    /* Image rows → stack or scroll */
-    [style*="display: flex"][style*="gap: 12px"][style*="flex: 2"] {
-      flex-direction: column !important;
-      align-items: center !important;
-    }
+    /* Image rows → stack */
     [style*="display: flex"][style*="gap: 20px"][style*="align-items: flex-start"] {
       flex-direction: column !important;
     }
@@ -461,15 +450,7 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
 <div class="agenda-tracker" id="agendaTracker">
   <div class="agenda-item" data-section="1">Vibe Coding</div>
   <span class="agenda-sep">/</span>
-  <div class="agenda-item" data-section="2">Hành trình</div>
-  <span class="agenda-sep">/</span>
   <div class="agenda-item" data-section="3">Cách làm</div>
-  <span class="agenda-sep">/</span>
-  <div class="agenda-item" data-section="4">Demo</div>
-  <span class="agenda-sep">/</span>
-  <div class="agenda-item" data-section="5">Bài học</div>
-  <span class="agenda-sep">/</span>
-  <div class="agenda-item" data-section="6">Reflection</div>
   <span class="agenda-sep">/</span>
   <div class="agenda-item" data-section="7">Phụ lục</div>
 </div>
@@ -492,44 +473,6 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
     <p style="color: #9ca3af; font-size: 0.75rem; margin-top: 16px;">
       Nhấn <span class="highlight">&rarr;</span> hoặc <span class="highlight">Space</span> để tiếp tục
     </p>
-  </div>
-</div>
-
-<!-- ==================== SLIDE 2: AGENDA ==================== -->
-<div class="slide" data-section="0">
-  <span class="pill">Agenda</span>
-  <h2>Hôm nay chúng ta sẽ nói về</h2>
-  <div class="card-grid cols-3" style="margin-top: 16px;">
-    <div class="card">
-      <span class="icon" style="color: var(--pink); font-weight: 800;">01</span>
-      <h3>Vibe Coding là gì?</h3>
-      <p>Định nghĩa &amp; lợi ích</p>
-    </div>
-    <div class="card">
-      <span class="icon" style="color: var(--pink); font-weight: 800;">02</span>
-      <h3>Hành trình 5 ngày</h3>
-      <p>Từ mù code đến ship product</p>
-    </div>
-    <div class="card">
-      <span class="icon" style="color: var(--pink); font-weight: 800;">03</span>
-      <h3>Cách làm</h3>
-      <p>Các bước, công cụ &amp; product spec</p>
-    </div>
-    <div class="card">
-      <span class="icon" style="color: var(--pink); font-weight: 800;">04</span>
-      <h3>Demo</h3>
-      <p>Cách build 1 UI đơn giản</p>
-    </div>
-    <div class="card">
-      <span class="icon" style="color: var(--pink); font-weight: 800;">05</span>
-      <h3>Bài học</h3>
-      <p>Điều mình ước biết sớm hơn</p>
-    </div>
-    <div class="card">
-      <span class="icon" style="color: var(--pink); font-weight: 800;">06</span>
-      <h3>Reflection</h3>
-      <p>AI là công cụ — con người là gì?</p>
-    </div>
   </div>
 </div>
 
@@ -624,119 +567,12 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
   </div>
 </div>
 
-<!-- ==================== SECTION 2: JOURNEY ==================== -->
-<div class="slide" data-section="2">
-  <div class="center-content">
-    <span class="pill">Phần 2</span>
-    <h1>Hành trình <span class="signature highlight" style="font-style: italic;">5 ngày</span></h1>
-    <p class="subtitle">Từ mù code đến ship product — cảm xúc thật, không tô màu</p>
-  </div>
-</div>
-
-<!-- Timeline -->
-<div class="slide" data-section="2">
-  <span class="pill">Timeline</span>
-  <h2>5 ngày thay đổi góc nhìn</h2>
-  <div class="timeline" style="margin-top: 10px;">
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-line"></div>
-      <div class="timeline-content">
-        <strong>Ngày 0 — Research</strong>
-        <span>"AI code được hả?" &rarr; Google, YouTube, hỏi bạn &rarr; Chọn Claude Code</span>
-        <span class="timeline-emotion" style="background: #fdf2f8; color: var(--pink);">Tò mò, nửa tin nửa ngờ</span>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-line"></div>
-      <div class="timeline-content">
-        <strong>Ngày 1 — Prompt đầu tiên</strong>
-        <span>Mở Claude Code. Gõ yêu cầu. Nó tạo code thật. Chạy thử — màn hình hiện ra cái gì đó!</span>
-        <span class="timeline-emotion" style="background: #ecfdf5; color: #059669;">Hào hứng, muốn làm tiếp</span>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-line"></div>
-      <div class="timeline-content">
-        <strong>Ngày 2 — Gặp lỗi liên tục</strong>
-        <span>Code chạy &rarr; Lỗi &rarr; Copy lỗi paste lại &rarr; AI fix &rarr; Lỗi khác &rarr; Lại fix</span>
-        <span class="timeline-emotion" style="background: #fff5f5; color: #ef4444;">Nản, muốn bỏ — nhưng thử thêm 1 lần</span>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-line"></div>
-      <div class="timeline-content">
-        <strong>Ngày 3 — Bắt đầu "hiểu" cách làm việc với AI</strong>
-        <span>Mô tả &rarr; Review &rarr; Chỉnh sửa &rarr; Repeat. Không còn hoảng khi gặp lỗi.</span>
-        <span class="timeline-emotion" style="background: #fdf2f8; color: var(--pink);">Tự tin hơn, bắt đầu thấy flow</span>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <strong>Ngày 4 — Deploy!</strong>
-        <span>App chạy trên máy. Nhờ AI deploy Vercel. Có link thật. Gửi cho đồng nghiệp. Done.</span>
-        <span class="timeline-emotion" style="background: #ecfdf5; color: #059669;">Tự hào — "Mình làm được thật à?"</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- First Product: HRIS Mobile Prototype -->
-<div class="slide" data-section="2">
-  <span class="pill">Sản phẩm đầu tiên</span>
-  <h2>Sau 5 ngày — đây là prototype đầu tiên</h2>
-  <div style="display: flex; gap: 20px; margin-top: 10px; align-items: flex-start;">
-    <div style="display: flex; gap: 12px; flex: 2; justify-content: center;">
-      <img src="images/hris-profile.png" alt="HRIS Profile" style="height: calc(100vh - 200px); max-height: 480px; width: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
-      <img src="images/hris-kpi.png" alt="HRIS KPI" style="height: calc(100vh - 200px); max-height: 480px; width: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
-      <img src="images/hris-attendance.png" alt="HRIS Attendance" style="height: calc(100vh - 200px); max-height: 480px; width: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
-    </div>
-    <div style="flex: 1;">
-      <h3 style="color: #171717; font-size: 1.1rem;">HRIS Mobile cho Salesman — by Vân Anh</h3>
-      <ul class="clean-list" style="margin-top: 6px;">
-        <li><strong>Prototype</strong> nhân sự trên điện thoại</li>
-        <li><strong>Mục đích:</strong> Hình dung concept &amp; workflow</li>
-        <li><strong>Kết quả:</strong> Team thấy ngay app sẽ trông thế nào</li>
-      </ul>
-      <p class="small-note">Build bởi non-tech. Trong vài ngày.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Lead Scout App by Phong -->
-<div class="slide" data-section="2">
-  <span class="pill">Sản phẩm của Phong</span>
-  <h2>Lead Scout App — by Phong</h2>
-  <div style="display: flex; gap: 20px; margin-top: 10px; align-items: flex-start;">
-    <div style="display: flex; gap: 12px; flex: 2; justify-content: center;">
-      <img src="images/LeadScout1.png" alt="Lead Scout Map" style="height: calc(100vh - 200px); max-height: 480px; width: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
-      <img src="images/LeadScout2.png" alt="Lead Scout Detail" style="height: calc(100vh - 200px); max-height: 480px; width: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
-      <img src="images/LeadScout3.png" alt="Lead Scout Update" style="height: calc(100vh - 200px); max-height: 480px; width: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
-    </div>
-    <div style="flex: 1;">
-      <h3 style="color: #171717; font-size: 1.1rem;">Bản đồ điểm bán tiềm năng</h3>
-      <ul class="clean-list" style="margin-top: 6px;">
-        <li><strong>Mục đích:</strong> Tích hợp bản đồ hiển thị điểm bán tiềm năng cho Sales</li>
-        <li><strong>Tính năng:</strong> Sales cập nhật trạng thái điểm bán trên app</li>
-        <li><strong>Tự động:</strong> Hệ thống tự lưu lại mọi thay đổi</li>
-      </ul>
-      <div style="background: #fdf2f8; border: 1px solid #f9b5c3; border-radius: var(--radius-sm); padding: 10px; margin-top: 10px;">
-        <p style="font-size: 0.82rem; color: #374151;"><strong style="color: var(--pink);">Full stack app</strong> — frontend + backend + database</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- ==================== SECTION 3: HOW TO ==================== -->
 <div class="slide" data-section="3">
   <div class="center-content">
     <span class="pill">Phần 3</span>
     <h1>Cách làm</h1>
-    <p class="subtitle">4 bước từ ý tưởng đến sản phẩm</p>
+    <p class="subtitle">5 bước từ ý tưởng đến sản phẩm</p>
     <div class="flow" style="margin-top: 24px;">
       <div class="flow-step">Brainstorm</div>
       <span class="flow-arrow">&rarr;</span>
@@ -744,7 +580,9 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
       <span class="flow-arrow">&rarr;</span>
       <div class="flow-step">Test</div>
       <span class="flow-arrow">&rarr;</span>
-      <div class="flow-step active-step">Deploy</div>
+      <div class="flow-step">Deploy</div>
+      <span class="flow-arrow">&rarr;</span>
+      <div class="flow-step active-step">AI Skill</div>
     </div>
   </div>
 </div>
@@ -761,6 +599,8 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
     <div class="st-item">3. Test</div>
     <span class="st-sep">&rarr;</span>
     <div class="st-item">4. Deploy</div>
+    <span class="st-sep">&rarr;</span>
+    <div class="st-item">5. AI Skill</div>
   </div>
   <span class="pill">Công cụ</span>
   <h2>Toolbox / Tech Stack</h2>
@@ -789,6 +629,8 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
     <div class="st-item">2. Code</div>
     <span class="st-sep">&rarr;</span>
     <div class="st-item">3–4. Test &amp; Deploy</div>
+    <span class="st-sep">&rarr;</span>
+    <div class="st-item">5. AI Skill</div>
   </div>
   <span class="pill">Trước khi bắt đầu</span>
   <h2>Hiểu 2 khái niệm này — sẽ dễ mô tả hơn cho AI</h2>
@@ -831,6 +673,8 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
     <div class="st-item">3. Test</div>
     <span class="st-sep">&rarr;</span>
     <div class="st-item">4. Deploy</div>
+    <span class="st-sep">&rarr;</span>
+    <div class="st-item">5. AI Skill</div>
   </div>
   <span class="pill">Bước 1</span>
   <h2>Brainstorming — Từ ý tưởng mơ hồ đến <span class="highlight">Product Spec</span></h2>
@@ -873,6 +717,8 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
     <div class="st-item">3. Test</div>
     <span class="st-sep">&rarr;</span>
     <div class="st-item">4. Deploy</div>
+    <span class="st-sep">&rarr;</span>
+    <div class="st-item">5. AI Skill</div>
   </div>
   <span class="pill">Bước 2</span>
   <h2>Code — Nói chuyện với AI</h2>
@@ -910,6 +756,37 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
   </div>
 </div>
 
+<!-- When stuck -->
+<div class="slide" data-section="3">
+  <div class="step-tracker">
+    <div class="st-item done">Toolbox</div>
+    <span class="st-sep">&rarr;</span>
+    <div class="st-item done">1. Brainstorm</div>
+    <span class="st-sep">&rarr;</span>
+    <div class="st-item active">2. Code (khi gặp khó)</div>
+    <span class="st-sep">&rarr;</span>
+    <div class="st-item">3. Test</div>
+    <span class="st-sep">&rarr;</span>
+    <div class="st-item">4. Deploy</div>
+    <span class="st-sep">&rarr;</span>
+    <div class="st-item">5. AI Skill</div>
+  </div>
+  <span class="pill">Khi gặp khó</span>
+  <h2>Bị bế tắc — <span class="highlight">Đừng hoảng</span></h2>
+  <div class="big-quote" style="font-size: 1.2rem;">
+    Bạn là <span class="highlight">Product Manager</span>. AI là Developer.<br>
+    <span style="font-size: 0.88rem; color: #6b7280;">Việc của bạn: biết mình muốn gì, mô tả rõ ràng, review kết quả.</span>
+  </div>
+  <table class="momo-table" style="margin-top: 10px;">
+    <tr><th>Tình huống</th><th>Cách xử lý</th></tr>
+    <tr><td>Chạy bị lỗi</td><td>Copy toàn bộ lỗi &rarr; paste lại cho AI: "Fix giúp tôi"</td></tr>
+    <tr><td>Không hiểu AI nói gì</td><td>"Giải thích cho tôi như tôi 5 tuổi"</td></tr>
+    <tr><td>Kết quả sai ý</td><td>Gửi screenshot: "Tôi muốn giống thế này"</td></tr>
+    <tr><td>Fix mãi không được</td><td>Nghỉ ngơi. Quay lại với đầu óc tỉnh táo</td></tr>
+    <tr><td>AI quên context</td><td>Copy lại spec: "Đọc lại spec, phần X bạn làm sai"</td></tr>
+  </table>
+</div>
+
 <!-- Steps 3+4: Test & Deploy -->
 <div class="slide" data-section="3">
   <div class="step-tracker">
@@ -922,6 +799,8 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
     <div class="st-item active">3. Test</div>
     <span class="st-sep">&rarr;</span>
     <div class="st-item active">4. Deploy</div>
+    <span class="st-sep">&rarr;</span>
+    <div class="st-item">5. AI Skill</div>
   </div>
   <span class="pill">Bước 3 &amp; 4</span>
   <h2>Test &amp; Deploy</h2>
@@ -950,184 +829,42 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
   </div>
 </div>
 
-<!-- When stuck -->
+<!-- Step 5: AI Skill -->
 <div class="slide" data-section="3">
   <div class="step-tracker">
     <div class="st-item done">Toolbox</div>
     <span class="st-sep">&rarr;</span>
     <div class="st-item done">1. Brainstorm</div>
     <span class="st-sep">&rarr;</span>
-    <div class="st-item active">2. Code (khi gặp khó)</div>
+    <div class="st-item done">2. Code</div>
     <span class="st-sep">&rarr;</span>
-    <div class="st-item">3. Test</div>
+    <div class="st-item done">3. Test</div>
     <span class="st-sep">&rarr;</span>
-    <div class="st-item">4. Deploy</div>
+    <div class="st-item done">4. Deploy</div>
+    <span class="st-sep">&rarr;</span>
+    <div class="st-item active">5. AI Skill</div>
   </div>
-  <span class="pill">Khi gặp khó</span>
-  <h2>Bị bế tắc — <span class="highlight">Đừng hoảng</span></h2>
-  <div class="big-quote" style="font-size: 1.2rem;">
-    Bạn là <span class="highlight">Product Manager</span>. AI là Developer.<br>
-    <span style="font-size: 0.88rem; color: #6b7280;">Việc của bạn: biết mình muốn gì, mô tả rõ ràng, review kết quả.</span>
+  <span class="pill">Bước 5 — Level Up</span>
+  <h2>AI Skill — Dạy AI <span class="highlight">"nhớ"</span> và tái sử dụng</h2>
+  <div class="big-quote" style="font-size: 1.1rem;">
+    "Mình cứ phải nói đi nói lại cùng một thứ. Có cách nào để AI nhớ không?"
   </div>
-  <table class="momo-table" style="margin-top: 10px;">
-    <tr><th>Tình huống</th><th>Cách xử lý</th></tr>
-    <tr><td>Chạy bị lỗi</td><td>Copy toàn bộ lỗi &rarr; paste lại cho AI: "Fix giúp tôi"</td></tr>
-    <tr><td>Không hiểu AI nói gì</td><td>"Giải thích cho tôi như tôi 5 tuổi"</td></tr>
-    <tr><td>Kết quả sai ý</td><td>Gửi screenshot: "Tôi muốn giống thế này"</td></tr>
-    <tr><td>Fix mãi không được</td><td>Nghỉ ngơi. Quay lại với đầu óc tỉnh táo</td></tr>
-    <tr><td>AI quên context</td><td>Copy lại spec: "Đọc lại spec, phần X bạn làm sai"</td></tr>
-  </table>
-</div>
-
-<!-- ==================== SECTION 4: DEMO ==================== -->
-<div class="slide" data-section="4">
-  <div class="center-content">
-    <span class="pill">Phần 4</span>
-    <h1>Demo: <span class="highlight">Cách Vibe Coding hoạt động</span></h1>
-    <p class="subtitle">Lead Scout App by Phong &amp; HRIS by VA</p>
-  </div>
-</div>
-
-<div class="slide" data-section="4">
-  <div class="center-content">
-    <span class="pill">Live Demo</span>
-    <h1 style="font-size: 2.2rem; color: var(--gray-300);">Live Demo</h1>
-    <p class="subtitle" style="margin-top: 8px;">Phần này sẽ được demo trực tiếp trên sân khấu</p>
-  </div>
-</div>
-
-<!-- ==================== SECTION 5: LESSONS ==================== -->
-<div class="slide" data-section="5">
-  <div class="center-content">
-    <span class="pill">Phần 5</span>
-    <h1>Bài học</h1>
-    <p class="subtitle">Điều mình ước biết sớm hơn</p>
-  </div>
-</div>
-
-<div class="slide" data-section="5">
-  <span class="pill">5 bài học</span>
-  <h2>Điều mình ước biết sớm hơn</h2>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px;">
-    <div style="display: flex; gap: 12px; align-items: flex-start; background: #ffffff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 16px;">
-      <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--gradient-pink); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-        <span style="font-size: 1.1rem; font-weight: 800; color: #fff;">1</span>
-      </div>
-      <div>
-        <h3 style="color: #171717; margin-bottom: 4px; font-size: 0.9rem;">Biết mình làm gì trước khi code</h3>
-        <p style="font-size: 0.82rem; color: #6b7280;">Brainstorming với AI ra được concept sản phẩm / product spec</p>
-      </div>
-    </div>
-    <div style="display: flex; gap: 12px; align-items: flex-start; background: #ffffff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 16px;">
-      <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--gradient-pink); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-        <span style="font-size: 1.1rem; font-weight: 800; color: #fff;">2</span>
-      </div>
-      <div>
-        <h3 style="color: #171717; margin-bottom: 4px; font-size: 0.9rem;">Đừng cầu toàn</h3>
-        <p style="font-size: 0.82rem; color: var(--pink); font-weight: 600;">App xấu mà chạy &gt; Ý tưởng đẹp mà không tồn tại</p>
-      </div>
-    </div>
-    <div style="display: flex; gap: 12px; align-items: flex-start; background: #ffffff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 16px;">
-      <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--gradient-pink); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-        <span style="font-size: 1.1rem; font-weight: 800; color: #fff;">3</span>
-      </div>
-      <div>
-        <h3 style="color: #171717; margin-bottom: 4px; font-size: 0.9rem;">Mô tả rõ vấn đề/lỗi cho AI</h3>
-        <p style="font-size: 0.82rem; color: #6b7280;">Càng mô tả rõ ràng, AI fix càng chính xác.</p>
-      </div>
-    </div>
-    <div style="display: flex; gap: 12px; align-items: flex-start; background: #ffffff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 16px;">
-      <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--gradient-pink); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-        <span style="font-size: 1.1rem; font-weight: 800; color: #fff;">4</span>
-      </div>
-      <div>
-        <h3 style="color: #171717; margin-bottom: 4px; font-size: 0.9rem;">Chia nhỏ yêu cầu</h3>
-        <div style="display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap;">
-          <span style="background: #f0f0f2; font-size: 0.68rem; padding: 2px 8px; border-radius: 50px;">Trang login</span>
-          <span style="color: var(--pink); font-weight: 700; font-size: 0.7rem;">&rarr;</span>
-          <span style="background: #f0f0f2; font-size: 0.68rem; padding: 2px 8px; border-radius: 50px;">Dashboard</span>
-          <span style="color: var(--pink); font-weight: 700; font-size: 0.7rem;">&rarr;</span>
-          <span style="background: #f0f0f2; font-size: 0.68rem; padding: 2px 8px; border-radius: 50px;">Upload</span>
-          <span style="color: var(--pink); font-weight: 700; font-size: 0.7rem;">&rarr;</span>
-          <span style="background: #fdf2f8; font-size: 0.68rem; padding: 2px 8px; border-radius: 50px; color: var(--pink);">...</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div style="display: flex; gap: 12px; align-items: center; background: #fdf2f8; border: 2px solid var(--pink); border-radius: var(--radius); padding: 14px 18px; margin-top: 10px;">
-    <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--gradient-pink); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-      <span style="font-size: 1.1rem; font-weight: 800; color: #fff;">5</span>
-    </div>
-    <div>
-      <h3 style="color: #171717; margin-bottom: 2px; font-size: 0.9rem;">Lưu lại thường xuyên (commit)</h3>
-      <p style="font-size: 0.82rem; color: #6b7280;">Mỗi tính năng chạy ổn &rarr; lưu. Lỡ AI phá hỏng thì quay lại version trước. Giống "Save game".</p>
-    </div>
-  </div>
-</div>
-
-<!-- Limitations -->
-<div class="slide" data-section="5">
-  <span class="pill">Thành thật</span>
-  <h2>Giới hạn của Vibe Coding</h2>
-  <div class="two-col" style="margin-top: 14px;">
-    <div>
-      <h3>Vibe coding OK cho</h3>
-      <ul class="clean-list">
-        <li>App đơn giản, MVP</li>
-        <li>Internal tool cho team</li>
-        <li>Prototype, validate ý tưởng</li>
-        <li>Side project cá nhân</li>
+  <div class="compare" style="margin-top: 14px;">
+    <div class="compare-box bad">
+      <h3>Không có Skill</h3>
+      <ul>
+        <li>Mỗi project: mô tả lại từ đầu</li>
+        <li>"Tôi muốn style giống MoMo, màu hồng..."</li>
+        <li>Tốn 30 phút / project</li>
       </ul>
     </div>
-    <div>
-      <h3 style="color: #ef4444;">Cần developer thật cho</h3>
-      <ul class="clean-list">
-        <li>App ngân hàng, y tế, hàng triệu users</li>
-        <li>Yêu cầu bảo mật cao</li>
-        <li>Bảo trì dài hạn, scale lớn</li>
-        <li>Khi AI cũng bế tắc</li>
+    <div class="compare-box good">
+      <h3>Có Skill</h3>
+      <ul>
+        <li>Chỉ cần gõ: /momo-frontend</li>
+        <li>AI tự biết tất cả</li>
+        <li>Tốn 0 phút mô tả</li>
       </ul>
-    </div>
-  </div>
-  <div class="big-quote" style="margin-top: 18px; font-size: 1.15rem;">
-    Tôi vẫn không hiểu code bên trong. Tôi phụ thuộc vào AI.<br>
-    <span style="color: var(--pink);">Và điều đó không sao cả</span> — miễn bạn biết giới hạn.
-  </div>
-</div>
-
-<!-- ==================== SECTION 6: REFLECTION ==================== -->
-<div class="slide" data-section="6">
-  <div class="center-content">
-    <span class="pill">Phần 6</span>
-    <h1 class="signature" style="font-style: italic;">Reflection</h1>
-    <p class="subtitle">Những điều AI không làm thay được</p>
-  </div>
-</div>
-
-<div class="slide" data-section="6">
-  <div style="display: flex; flex-direction: column; justify-content: center; height: 100%; max-width: 800px; margin: 0 auto;">
-    <div class="reflection-text">
-      <p style="margin-bottom: 14px;">Vibe coding giúp mình đi từ idea đến sản phẩm thật <span class="accent">nhanh hơn rất nhiều</span>. Nhưng ngồi nhìn lại — mình nhận ra thứ AI không làm thay được không phải là code.</p>
-      <p style="margin-bottom: 14px;">Là <span class="accent">biết mình đang giải quyết vấn đề gì</span>. Là câu hỏi đặt ra trước khi bắt tay làm. Là quyết định cái gì <span class="accent">không cần build</span>.</p>
-      <p style="margin-bottom: 14px;">AI sẽ ngày càng phổ biến — đến một lúc nào đó, dùng AI thành thạo sẽ bình thường như dùng Excel bây giờ. <span class="accent">Khoảng cách đó sẽ thu hẹp lại.</span></p>
-      <p style="margin-bottom: 14px;">Nhưng khoảng cách về <span class="accent signature" style="font-style: italic; font-size: 1.2rem;">tư duy</span> thì không. Ai đang giải đúng vấn đề? Ai đang build đúng thứ người dùng cần?</p>
-      <p><span class="accent">Đó vẫn là con người.</span> AI chỉ là công cụ — công cụ tốt đến đâu cũng phụ thuộc vào người cầm nó biết mình muốn đi đâu.</p>
-    </div>
-  </div>
-</div>
-
-<!-- CLOSING -->
-<div class="slide" data-section="6">
-  <div class="center-content">
-    <h1 style="font-size: 2.4rem;">Bạn không cần phải là developer<br>để <span class="highlight signature" style="font-style: italic;">tạo ra thứ gì đó</span></h1>
-    <p class="subtitle" style="font-size: 1.15rem; margin-top: 10px; color: var(--gray-300);">
-      Ý tưởng + Kiên nhẫn + AI = Sản phẩm thật
-    </p>
-    <p style="font-size: 1rem; color: var(--gray-400); margin-top: 4px;">
-      Nếu một người HR như tôi làm được, bạn cũng làm được.
-    </p>
-    <div style="margin-top: 28px; padding: 14px 32px; background: var(--gradient-pink); border-radius: 50px; display: inline-block;">
-      <span style="font-size: 1.1rem; font-weight: 700; color: #ffffff;">Hãy bắt đầu. Ngay hôm nay.</span>
     </div>
   </div>
 </div>
@@ -1199,34 +936,7 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
   </div>
 </div>
 
-<!-- AI Skill — Intro -->
-<div class="slide" data-section="7">
-  <span class="pill">Phụ lục — AI Skill</span>
-  <h2>AI Skill — Dạy AI <span class="highlight">"nhớ"</span> và tái sử dụng</h2>
-  <div class="big-quote" style="font-size: 1.1rem;">
-    "Mình cứ phải nói đi nói lại cùng một thứ. Có cách nào để AI nhớ không?"
-  </div>
-  <div class="compare" style="margin-top: 14px;">
-    <div class="compare-box bad">
-      <h3>Không có Skill</h3>
-      <ul>
-        <li>Mỗi project: mô tả lại từ đầu</li>
-        <li>"Tôi muốn style giống MoMo, màu hồng..."</li>
-        <li>Tốn 30 phút / project</li>
-      </ul>
-    </div>
-    <div class="compare-box good">
-      <h3>Có Skill</h3>
-      <ul>
-        <li>Chỉ cần gõ: /momo-frontend</li>
-        <li>AI tự biết tất cả</li>
-        <li>Tốn 0 phút mô tả</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- AI Skill — Comparison -->
+<!-- AI Skill -->
 <div class="slide" data-section="7">
   <span class="pill">Phụ lục — AI Skill</span>
   <h2>So sánh tốc độ khi có Skill</h2>
@@ -1263,167 +973,6 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
     <div class="stat">
       <div class="number">&infin;</div>
       <div class="label">Lần tái sử dụng</div>
-    </div>
-  </div>
-</div>
-
-<!-- ==================== APPENDIX: SPT — Problem ==================== -->
-<div class="slide" data-section="7">
-  <span class="pill">Phụ lục — Quá trình build web app Salesman Promotion Tracker</span>
-  <h2>Mình đang giải quyết <span class="highlight">vấn đề gì?</span></h2>
-  <div class="two-col" style="margin-top: 10px;">
-    <div>
-      <h3 style="color: #ef4444;">Trước đây — Quy trình thủ công</h3>
-      <ul class="clean-list">
-        <li>Nâng/hạ bậc Salesman mỗi tháng qua <strong>email + Google Drive + Excel</strong></li>
-        <li>Nhiều file rải rác, không ai biết đang ở bước nào</li>
-        <li>Tất cả <strong>bằng tay</strong> — dễ sót, khó truy vết</li>
-      </ul>
-    </div>
-    <div>
-      <h3 style="color: var(--pink);">Giải pháp — App quản lý toàn bộ</h3>
-      <ul class="clean-list">
-        <li><strong>8+ roles:</strong> SFE, RSM, Manager, BU Head, HRBP, BGK...</li>
-        <li><strong>Tự động:</strong> upload Excel → parse → validate → notification</li>
-        <li><strong>Quy trình rõ ràng:</strong> ai làm gì, đến bước nào, deadline khi nào</li>
-      </ul>
-      <div style="background: #fdf2f8; border: 1px solid #f9b5c3; border-radius: var(--radius-sm); padding: 10px; margin-top: 10px;">
-        <p style="font-size: 0.82rem; color: #374151;"><strong style="color: var(--pink);">Nhóm 2:</strong> App fullstack — data riêng, auth riêng, <strong>không phụ thuộc IT</strong> (khác HRIS).</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SPT Flow -->
-<div class="slide" data-section="7">
-  <span class="pill">SPT — Quy trình</span>
-  <h2>Chu trình nâng bậc Salesman</h2>
-  <div class="flow" style="margin: 14px 0; justify-content: center; flex-wrap: wrap;">
-    <div class="flow-step" style="font-size: 0.78rem; padding: 8px 12px;">SFE Upload</div>
-    <span class="flow-arrow">&rarr;</span>
-    <div class="flow-step" style="font-size: 0.78rem; padding: 8px 12px;">RSM Nomination</div>
-    <span class="flow-arrow">&rarr;</span>
-    <div class="flow-step" style="font-size: 0.78rem; padding: 8px 12px;">Manager Approve</div>
-    <span class="flow-arrow">&rarr;</span>
-    <div class="flow-step" style="font-size: 0.78rem; padding: 8px 12px;">BU Head Approve</div>
-    <span class="flow-arrow">&rarr;</span>
-    <div class="flow-step" style="font-size: 0.78rem; padding: 8px 12px;">Interview &amp; BGK</div>
-    <span class="flow-arrow">&rarr;</span>
-    <div class="flow-step active-step" style="font-size: 0.78rem; padding: 8px 12px;">Decision &amp; Export</div>
-  </div>
-  <div class="card-grid cols-3" style="margin-top: 8px;">
-    <div class="card" style="padding: 14px;">
-      <h3 style="font-size: 0.88rem;">Upload &amp; Validate</h3>
-      <p style="font-size: 0.8rem;">SFE upload Excel → app tự parse, check knock-out (KPI, thâm niên), tạo cycle</p>
-    </div>
-    <div class="card" style="padding: 14px;">
-      <h3 style="font-size: 0.88rem;">Nomination &amp; Approval</h3>
-      <p style="font-size: 0.8rem;">RSM điền form → Sales Manager review → BU Head duyệt cuối cùng</p>
-    </div>
-    <div class="card" style="padding: 14px;">
-      <h3 style="font-size: 0.88rem;">Interview &amp; Kết quả</h3>
-      <p style="font-size: 0.8rem;">9 BGK chấm điểm → app tổng hợp tự động → email kết quả → Salesman confirm</p>
-    </div>
-  </div>
-  <p class="small-note" style="text-align: center;">Tất cả quy trình này — build bằng vibe coding. Không viết 1 dòng code nào bằng tay.</p>
-</div>
-
-<!-- SPT Vibe Coding Process 1 -->
-<div class="slide" data-section="7">
-  <span class="pill">SPT — Vibe Coding thực tế</span>
-  <h2>Bước 1: Brainstorm &amp; viết Product Spec với AI</h2>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 12px;">
-    <div class="desktop-frame">
-      <div class="desktop-bar">
-        <div class="dot" style="background: #ef4444;"></div>
-        <div class="dot" style="background: #f59e0b;"></div>
-        <div class="dot" style="background: #22c55e;"></div>
-      </div>
-      <img src="images/Vibe coding sharing/Slide1.PNG" alt="Brainstorm with Claude" style="width: 100%; height: auto; display: block;">
-    </div>
-    <div class="desktop-frame">
-      <div class="desktop-bar">
-        <div class="dot" style="background: #ef4444;"></div>
-        <div class="dot" style="background: #f59e0b;"></div>
-        <div class="dot" style="background: #22c55e;"></div>
-      </div>
-      <img src="images/Vibe coding sharing/Slide2.PNG" alt="Product Spec output" style="width: 100%; height: auto; display: block;">
-    </div>
-  </div>
-  <p class="small-note" style="text-align: center;">Mô tả yêu cầu bằng tiếng Việt → AI tạo Product Spec chi tiết → Review và chỉnh sửa</p>
-</div>
-
-<!-- SPT Vibe Coding Process 2 -->
-<div class="slide" data-section="7">
-  <span class="pill">SPT — Vibe Coding thực tế</span>
-  <h2>Bước 2: Code từng module với AI</h2>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 12px;">
-    <div class="desktop-frame">
-      <div class="desktop-bar">
-        <div class="dot" style="background: #ef4444;"></div>
-        <div class="dot" style="background: #f59e0b;"></div>
-        <div class="dot" style="background: #22c55e;"></div>
-      </div>
-      <img src="images/Vibe coding sharing/Slide3.PNG" alt="Coding modules" style="width: 100%; height: auto; display: block;">
-    </div>
-    <div class="desktop-frame">
-      <div class="desktop-bar">
-        <div class="dot" style="background: #ef4444;"></div>
-        <div class="dot" style="background: #f59e0b;"></div>
-        <div class="dot" style="background: #22c55e;"></div>
-      </div>
-      <img src="images/Vibe coding sharing/Slide4.PNG" alt="Iterating on code" style="width: 100%; height: auto; display: block;">
-    </div>
-  </div>
-  <p class="small-note" style="text-align: center;">Gửi spec → AI viết code → Review kết quả → Điều chỉnh → Lặp lại cho đến khi đúng ý</p>
-</div>
-
-<!-- SPT Vibe Coding Process 3 -->
-<div class="slide" data-section="7">
-  <span class="pill">SPT — Vibe Coding thực tế</span>
-  <h2>Bước 3: Test, fix lỗi &amp; deploy</h2>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 12px;">
-    <div class="desktop-frame">
-      <div class="desktop-bar">
-        <div class="dot" style="background: #ef4444;"></div>
-        <div class="dot" style="background: #f59e0b;"></div>
-        <div class="dot" style="background: #22c55e;"></div>
-      </div>
-      <img src="images/Vibe coding sharing/Slide5.PNG" alt="Testing and fixing" style="width: 100%; height: auto; display: block;">
-    </div>
-    <div class="desktop-frame">
-      <div class="desktop-bar">
-        <div class="dot" style="background: #ef4444;"></div>
-        <div class="dot" style="background: #f59e0b;"></div>
-        <div class="dot" style="background: #22c55e;"></div>
-      </div>
-      <img src="images/Vibe coding sharing/Slide6.PNG" alt="Deploying" style="width: 100%; height: auto; display: block;">
-    </div>
-  </div>
-  <p class="small-note" style="text-align: center;">Copy lỗi → paste cho AI → AI fix → Test lại → Deploy lên Vercel</p>
-</div>
-
-<!-- SPT Results -->
-<div class="slide" data-section="7">
-  <span class="pill">SPT — Thành quả</span>
-  <h2>Salesman Promotion Tracker — App thật</h2>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px;">
-    <div>
-      <img src="images/spt.png" alt="SPT Dashboard" style="width: 100%; height: auto; border-radius: var(--radius-sm); box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-    </div>
-    <div>
-      <img src="images/spt1.png" alt="SPT Cycle Detail" style="width: 100%; height: auto; border-radius: var(--radius-sm); box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-    </div>
-  </div>
-  <div style="display: flex; gap: 16px; margin-top: 12px; align-items: center;">
-    <div style="flex: 1;">
-      <ul class="clean-list" style="margin-top: 0;">
-        <li><strong>Next.js + Supabase + Vercel</strong> — full stack</li>
-        <li>Nhiều role, nhiều bước duyệt, email tự động</li>
-      </ul>
-    </div>
-    <div style="background: #fff5f5; border: 1px solid #fecaca; border-radius: var(--radius-sm); padding: 10px 14px; flex: 1;">
-      <p style="font-size: 0.82rem; color: #374151; margin: 0;"><strong style="color: #ef4444;">Note:</strong> Đang deploy nên UI chưa đẹp — nhưng đây là <strong>app fullstack thật</strong>, có database, auth, email. Không phụ thuộc IT.</p>
     </div>
   </div>
 </div>
@@ -1472,7 +1021,7 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
   <div class="center-content">
     <img src="images/MOMO-Logo-App.png" alt="MoMo" style="width: 56px; height: auto; border-radius: 12px; margin-bottom: 16px;">
     <h1>Cảm ơn!</h1>
-    <p class="subtitle" style="margin-top: 8px;">Made with <span class="signature" style="font-style: italic; color: var(--pink);">Vibe Coding</span> by Vân Anh</p>
+    <p class="subtitle" style="margin-top: 8px;">Made with <span class="signature" style="font-style: italic; color: var(--pink);">Vibe Coding</span>, of course.</p>
     <div style="margin-top: 24px; display: flex; gap: 14px;">
       <div class="card" style="text-align: center; padding: 14px 24px;">
         <p style="color: var(--pink); font-weight: 600; font-size: 0.9rem;">Slide này</p>
@@ -1499,7 +1048,7 @@ if(sessionStorage.getItem('pw_ok')==='1') document.getElementById('passwordGate'
   const agendaItems = document.querySelectorAll('.agenda-item');
   let current = 0;
 
-  const sectionMap = { '1': 0, '2': 1, '3': 2, '4': 3, '5': 4, '6': 5, '7': 6 };
+  const sectionMap = { '1': 0, '3': 1, '7': 2 };
 
   function updateSlide() {
     slides.forEach((s, i) => s.classList.toggle('active', i === current));
